@@ -24,7 +24,7 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 class User(AbstractUser):
-    username = None  # убираем поле username
+    username = None  
     email = models.EmailField(unique=True)
     activation_code = models.CharField(max_length=64, blank=True, null=True)
 
